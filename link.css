@@ -1,0 +1,520 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Monaco, monospace;
+}
+@font-face {font-family:  "Halo3" ; src: url("Halo3.ttf");}
+@font-face {font-family:  "ArcadeClassic" ; src: url("ARCADECLASSIC.TTF");}
+.main{
+  width: 100vw;
+  height: 100vh;  
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("arcade-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  box-sizing:border-box ;
+ 
+  position: absolute;
+  
+  z-index: -1;
+}
+
+.inputbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+}
+.registrybox{
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  background: rgba(128, 128, 128, 0.756);
+  box-shadow: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius:10px; 
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.navbar{
+  height: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blue;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+  padding: 0 2%;
+}
+
+nav {
+  cursor: pointer;
+  
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+nav ul li{
+  list-style: none;
+  margin-right: 40px;
+}
+
+nav ul li:last-child{
+  margin-right: 0;
+}
+
+nav ul li a{
+  width: 75px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none ;
+  color: black;
+  background-color: cyan;
+  padding: 5px;
+  border-radius: 12px;
+  border: 2px solid white;
+  
+}
+nav ul li a:hover{
+  border: cyan solid 2px;
+  background-color: rgb(1, 93, 93);
+  color: #fff;
+  scale: 1.2;
+}
+
+.title{
+  margin-top: 100px;
+    
+    font-family: "Halo3", sans-serif;
+    color: yellow;
+    text-align: center;
+    font-size: 96px;
+    font-weight: bold;  
+    animation: neon 2s infinite alternate; 
+    line-height: 50%;
+}
+.title h2{
+  font-size: 55px;
+  font-family: "ArcadeClassic", sans-serif;
+  color: #ff8400;
+}
+.index-button button{
+  width: 450px;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1.5em;
+
+}
+.index-button button a{
+  font-size: 40px;
+  font-family: "ArcadeClassic", sans-serif;
+}
+
+.header-emoji{
+  scale: 0.5;
+  width: 50px;
+  transform: translate(-50px, -50px);
+  position: relative;
+  
+}
+
+.header-emoji img{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 5px solid orange;
+  border-radius: 10px;
+
+}
+#eye {
+  z-index: 3;
+}
+
+#mouth {
+  z-index: 2;
+}
+
+#skin {
+  z-index: 1;
+}
+
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 20px #ff00ff;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff;
+  }
+  }
+  
+/* @keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+} */
+  
+a.menu-button {
+
+  margin-top: 50px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border-radius: 10px;
+  box-shadow: 0px 3px 0px #3e8e41;
+}
+
+a.menu-button:hover {
+  background-color: #3e8e41;
+  box-shadow: 0px 3px 0px #2c6b32;
+}
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff8400;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px; 
+  border-radius: 10px;
+  margin-left:auto ;
+  margin-right: auto;
+  
+}
+button:hover {
+  border: 5px solid rgb(0, 51, 255);
+  scale: 1.1;
+}
+
+.emoji-maker{
+  background-color: aliceblue;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  border-radius: 30px;
+  padding-bottom: 50px;
+}
+
+.emoji-maker img{
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  margin-left: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.selected {
+  margin: 10px;
+  border: 2px solid #1eff00;
+  border-color:#1eff00 ;
+  position: relative; 
+}
+/* --------------------easy---------------------- */
+.wrapper {
+  box-sizing: content-box;
+  width: 700px;
+  background-color: rgba(255, 255, 255, 0.55);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  padding: 20px 40px 20px 20px;
+  border-radius: 0.6em; 
+  box-shadow: 0 0.9em 2.8em grey 
+}
+.game-container-medium{
+  display: grid;
+  grid-gap: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba (0, 0, 0, 0.1);
+}
+
+.game-container{
+  position: relative;
+    width: 50%;
+    display: grid;
+    gap: 0.6em;
+    left: 25%;
+}
+.stats-container {
+  
+  text-align: right;
+  margin-bottom: 1.2em;
+}
+.stats-container span {
+  font-weight: 600;
+}
+.card-container {
+  
+  position: relative;
+  width: 6.25em;
+  height: 6.25em;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+.card-before,
+.card-after {
+  position: absolute;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #000000;
+  transition: transform 0.7s ease-out;
+  backface-visibility: hidden;
+}
+.card-after img{
+  
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+.card-before {
+  background-color: #f4c531;
+  font-size: 2.8em;
+  font-weight: 600;
+}
+.card-after {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+}
+.card-container.flipped .card-before {
+  transform: rotateY(180deg);
+}
+.card-container.flipped .card-after {
+  transform: rotateY(0deg);
+} 
+
+
+.controls-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 100%;
+  height: 88%;
+  background-color: #f4c731ca;
+  top: 0;
+}  
+.controls-container h1{
+  font-size: 500%;
+  align-items: center;
+  top: 0;
+  font-family: "ArcadeClassic", sans-serif;
+  margin-bottom: 50px;
+}
+#start {
+  margin-bottom: 20px;
+  border: #fff solid 3px;
+}
+#choose-difficulty{
+  border: #fff solid 3px;
+}
+.difficulty-box{
+  width: 720px;
+  height: 620px;
+}
+#submit-result{
+  border: blue solid 5px;
+  margin-top: 20px;
+  background-color: rgb(0, 183, 255);
+}
+
+.difficulty{
+  margin: 1%;
+  padding: 20px;
+  box-shadow: 0px 0px 20px 7px grey;
+  width: 700px;
+  height: 600px;
+  background-color: rgba(128, 128, 128, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: white solid 5px;
+}
+.difficulty h1{
+  padding-top: 30px;
+  text-align: center;
+  position: relative;
+  color: #00ffff;
+  font-family: "Halo3", sans-serif;
+  font-size: 48px;
+  animation: neon 2s infinite alternate; 
+}
+.difficulty a {
+  border: white solid solid 3px;
+  display: block;
+  font-size: 24px;
+  font-family: "ArcadeClassic", sans-serif;
+  margin-top: 60px;/* Change this value to adjust the spacing */
+  width: 100px ; 
+  height: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+.difficulty-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border:white;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  top: 16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+#stop {
+  font-size: 1.1em;
+  display: block;
+  margin: 1.1em auto 0 auto;
+  background-color: #000000;
+  color: #ffffff;
+}
+.controls-container button {
+  font-size: 1.3em;
+  box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+}
+.hide {
+  display: none;
+}
+
+#result {
+  text-align: center;
+}
+#result h2 {
+  font-size: 2.5em;
+}
+#result h4 {
+  font-size: 1.8em;
+  margin: 0.6em 0 1em 0;
+} 
+.leaderboard-table-wrapper{
+  background-color: rgba(128, 128, 128, 0.658);
+  box-shadow: 0px 0px 20px 7px grey;
+  margin-left: 25% ;
+  margin-right: 25%;
+}
+.leaderboard-table {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: left;
+  margin-top: 50px;
+}
+
+table {
+  border-collapse: collapse;  
+  color: white;
+  margin: 0 30px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  height: 20px;
+}
+th {
+  background-color: #333;
+}
+
+
+
+#easy-leaderboard-table {
+  background-color: #0015ff;
+}
+
+#medium-leaderboard-table {
+  background-color: #fdcb6e;
+}
+
+#complex-leaderboard-table {
+  background-color: #e84393;
+}
+
+body.transition {
+  background-color: #000;
+  background-image: url("loading-spinner.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.transition:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+body.transition:after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  background-image: url("loading-spinner.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+}
+.error {
+  color: red;
+  text-align: center;
+}
